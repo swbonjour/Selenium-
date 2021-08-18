@@ -9,15 +9,11 @@ def pytest_addoption(parser):
 def browser(request):
     language_name = request.config.getoption("language")
     browser_name = request.config.getoption("browser_name")
-    browser = None
-    lang = None
     
     if language_name == "ru":
         print("russian")
-        lang = "ru"
     elif language_name == "en":
         print("eng")
-        lang = "eng"
     else:
         raise pytest.UsageError("--laguage should be en or ru")
         
