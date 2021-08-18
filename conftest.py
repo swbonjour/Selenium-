@@ -18,6 +18,8 @@ def browser(request):
     elif language_name == "en":
         print("eng")
         lang = "eng"
+    else:
+        raise pytest.UsageError("--laguage should be en or ru")
         
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
